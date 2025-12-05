@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
 function NavigationBar() {
   return (
-    <Navbar expand="lg" style={{ backgroundColor: "#272626" }}>
+    <Navbar expand="lg" variant="dark" style={{ backgroundColor: "#272626" }}>
       <Container fluid>
         <Navbar.Toggle aria-controls="navbarUnderlineExample" />
         <Navbar.Brand href="#">

@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 
 body {
   background-image: url("/public/argazkiak/FondoA.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, .fw-bold {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.fw-bold {
   font-weight: 700 !important;
 }
 
@@ -25,9 +31,9 @@ h1, h2, h3, h4, h5, h6, .fw-bold {
   color: white !important;
 }
 
-.hero-blur h1, 
-.hero-blur h2, 
-.hero-blur h3, 
+.hero-blur h1,
+.hero-blur h2,
+.hero-blur h3,
 .hero-blur p {
   color: white !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
@@ -68,6 +74,22 @@ h1, h2, h3, h4, h5, h6, .fw-bold {
 
 .navbar-dark .nav-link.dropdown-toggle.show {
   color: white !important;
+}
+
+/* Ensure the dropdown caret (arrow) is visible/white */
+.navbar-dark .nav-link.dropdown-toggle::after {
+  border-top-color: #fff !important;
+}
+
+/* Restore hover/focus behavior for the dropdown toggle in dark navbar */
+.navbar-dark .nav-link.dropdown-toggle:hover,
+.navbar-dark .nav-link.dropdown-toggle:focus {
+  color: #007bff !important;
+}
+
+.navbar-dark .nav-link.dropdown-toggle:hover::after,
+.navbar-dark .nav-link.dropdown-toggle:focus::after {
+  border-top-color: #007bff !important;
 }
 
 /* Footer logo */
