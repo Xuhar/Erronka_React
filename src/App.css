@@ -38,6 +38,10 @@ h6,
   color: white !important;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
+.hero-blur h1 {
+    /* color: #310101 !important;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px rgb(231, 39, 39), 0 0 30px rgb(255, 0, 0), 0 0 40px #0ff; */
+}
 
 /* Section with alternative background */
 .section-alt {
@@ -97,6 +101,13 @@ h6,
   height: 90px;
   width: 200px !important;
   object-fit: contain;
+}
+footer .iconos img {
+  filter: invert(0.7);
+}
+footer .iconos img:hover {
+  filter: invert(0.3);
+  transition-duration: 200ms;
 }
 
 /* Ensure proper spacing */

@@ -1,20 +1,21 @@
 import React from "react";
-import NavigationBar from "./components/NavBar";
-import HeroSection from "./components/HeroSection";
-import FeaturesSection from "./components/FeaturesSection";
-import HighlightsSection from "./components/HighlightsSection";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <NavigationBar />
-      <HeroSection />
-      <FeaturesSection />
-      <HighlightsSection />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Layout compartido para todas las páginas */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
