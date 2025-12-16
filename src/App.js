@@ -4,6 +4,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import BlowerPage from './pages/BlowerPage';
+import TeamPage from './pages/TeamPage';
+import Login from './pages/Login';
 import "./App.css";
 
 function App() {
@@ -14,9 +16,14 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="blowers" element={<BlowerPage />} />
+          <Route path="blowers">
+            <Route index element={<BlowerPage defaultId="oihan" />} />
+
+            <Route path=":id" element={<BlowerPage />} />
+          </Route>
           <Route path="events" element={<Home />} />
-          <Route path="teams" element={<Home />} />
+          <Route path="teams" element={<TeamPage />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>

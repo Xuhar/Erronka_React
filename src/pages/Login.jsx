@@ -1,12 +1,11 @@
 import Hero from '../components/HeroSection';
 import "../styles/Contact.css"
 
-const Contact = () => {
+const Login = () => {
   return (
     <>
       <Hero 
-        title="Contact"
-        subtitle="Got questions about the event, registrations, sponsorships, or wild Freestyle ideas? Contact us!"
+        title="Log in"
         cosas={
             <form class="contact-form">
                 <div class="form-group">
@@ -17,6 +16,10 @@ const Contact = () => {
                     <label class="required-label" for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required/>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter password"/>
                 </div>
                 <div className="form-group msg">
                     <label class="required-label" htmlFor="messageTextarea">Message</label>
@@ -40,4 +43,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Login;

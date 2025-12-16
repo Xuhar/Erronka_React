@@ -1,0 +1,121 @@
+.description {
+    text-align: justify;
+}
+/* --- Estilos para el Catálogo del Team --- */
+
+/* Wrapper para dar espacio al slider y sus flechas */
+.team-catalog-slider-wrapper {
+  padding: 0 30px; /* Espacio lateral para las flechas si se usan */
+}
+
+/* --- Estilos de la Tarjeta (ParticipantCard) --- */
+.participant-card {
+  position: relative;
+  overflow: hidden; /* Necesario para que la imagen no se salga al hacer zoom */
+  border-radius: 8px;
+  /* Altura fija para uniformidad, ajústala según tus imágenes */
+  height: 400px; 
+  background-color: #1a1a1a; /* Fondo de respaldo */
+  margin: 0 10px; /* Espacio entre tarjetas en el slider */
+}
+
+/* Contenedor de la imagen */
+.participant-card-img-container {
+  height: 100%;
+  width: 100%;
+}
+
+.participant-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin deformarse */
+  object-position: center top;
+  transition: transform 0.4s ease-out; /* Suavizado del efecto zoom */
+}
+
+/* EFECTO HOVER: Zoom en la imagen */
+.participant-card:hover .participant-card-img {
+  transform: scale(1.07);
+}
+
+/* --- La superposición inferior (Información) --- */
+/* --- La superposición inferior (Información) --- */
+.participant-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 1.5rem 1rem 0.8rem 1rem;
+  
+  /* ESTADO INICIAL (OCULTO) */
+  opacity: 0;                   /* Totalmente transparente */
+  transform: translateY(20px);  /* Desplazado un poco hacia abajo */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+
+  /* Fondo degradado */
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, transparent 100%);
+}
+
+/* ESTADO HOVER (VISIBLE) */
+/* Cuando hacemos hover en la tarjeta, el overlay cambia */
+.participant-card:hover .participant-card-overlay {
+  opacity: 1;                   /* Se vuelve visible */
+  transform: translateY(0);     /* Sube a su posición original */
+}
+
+/* El fondo inclinado (Slanted background) */
+.participant-card-overlay::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: #8a7f82; 
+  transform-origin: bottom right;
+  transform: skewY(-4deg); 
+  z-index: -1; 
+  transition: background-color 0.3s ease;
+}
+
+/* Opcional: Cambiar color del fondo inclinado al hover */
+.participant-card:hover .participant-card-overlay::before {
+   background-color: #ffd6d6; 
+}
+
+/* Estilos de texto específicos */
+.participant-nickname {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.participant-badge {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.participant-details {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+/* --- Ajustes de React Slick --- */
+/* Asegurar que los puntos de navegación se vean en fondo oscuro */
+.slick-dots li button:before {
+    color: white !important; 
+    opacity: 0.5;
+}
+.slick-dots li.slick-active button:before {
+    color: white !important;
+    opacity: 1;
+}

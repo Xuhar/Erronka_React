@@ -20,11 +20,16 @@ function HeroSection({
 
           {subtitle && (
             <p
-              className="lead mb-5"
+              className="lead mb-4"
               style={{ maxWidth: "800px", margin: "0 auto" }}
             >
               {subtitle}
             </p>
+          )}
+          {cosas && (
+            <div className="hero-cosas">
+              {cosas}
+            </div>
           )}
 
           {(primaryButton || secondaryButton) && (
@@ -50,11 +55,6 @@ function HeroSection({
                   {secondaryButton.label}
                 </Button>
               )}
-            </div>
-          )}
-          {cosas && (
-            <div className="hero-cosas">
-              {cosas}
             </div>
           )}
         </div>
