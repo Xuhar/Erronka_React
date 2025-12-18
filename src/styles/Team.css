@@ -1,25 +1,60 @@
 .description {
     text-align: justify;
 }
-/* --- Estilos para el Catálogo del Team --- */
 
-/* Wrapper para dar espacio al slider y sus flechas */
+/* --- Estilos para el Catálogo del Team con Swiper --- */
 .team-catalog-slider-wrapper {
-  padding: 0 30px; /* Espacio lateral para las flechas si se usan */
+  padding: 0 40px; /* Espacio para las flechas de navegación */
+}
+
+/* Personalizar las flechas de Swiper */
+.team-catalog-slider-wrapper .swiper-button-next,
+.team-catalog-slider-wrapper .swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.team-catalog-slider-wrapper .swiper-button-next:after,
+.team-catalog-slider-wrapper .swiper-button-prev:after {
+  font-size: 20px;
+}
+
+/* Personalizar paginación */
+.team-catalog-slider-wrapper .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+
+.team-catalog-slider-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #fff;
+}
+
+/* Ocultar flechas en móvil */
+@media (max-width: 576px) {
+  .team-catalog-slider-wrapper .swiper-button-next,
+  .team-catalog-slider-wrapper .swiper-button-prev {
+    display: none;
+  }
+  
+  .team-catalog-slider-wrapper {
+    padding: 0 10px;
+  }
 }
 
 /* --- Estilos de la Tarjeta (ParticipantCard) --- */
 .participant-card {
   position: relative;
-  overflow: hidden; /* Necesario para que la imagen no se salga al hacer zoom */
+  overflow: hidden;
   border-radius: 8px;
-  /* Altura fija para uniformidad, ajústala según tus imágenes */
   height: 400px; 
-  background-color: #1a1a1a; /* Fondo de respaldo */
-  margin: 0 10px; /* Espacio entre tarjetas en el slider */
+  background-color: #1a1a1a;
+  width: 100%;
 }
 
-/* Contenedor de la imagen */
 .participant-card-img-container {
   height: 100%;
   width: 100%;
@@ -28,18 +63,15 @@
 .participant-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin deformarse */
+  object-fit: cover;
   object-position: center top;
-  transition: transform 0.4s ease-out; /* Suavizado del efecto zoom */
+  transition: transform 0.4s ease-out;
 }
 
-/* EFECTO HOVER: Zoom en la imagen */
 .participant-card:hover .participant-card-img {
   transform: scale(1.07);
 }
 
-/* --- La superposición inferior (Información) --- */
-/* --- La superposición inferior (Información) --- */
 .participant-card-overlay {
   position: absolute;
   bottom: 0;
@@ -47,24 +79,17 @@
   width: 100%;
   z-index: 2;
   padding: 1.5rem 1rem 0.8rem 1rem;
-  
-  /* ESTADO INICIAL (OCULTO) */
-  opacity: 0;                   /* Totalmente transparente */
-  transform: translateY(20px);  /* Desplazado un poco hacia abajo */
-  transition: all 0.3s ease-in-out; /* Transición suave */
-
-  /* Fondo degradado */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
   background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, transparent 100%);
 }
 
-/* ESTADO HOVER (VISIBLE) */
-/* Cuando hacemos hover en la tarjeta, el overlay cambia */
 .participant-card:hover .participant-card-overlay {
-  opacity: 1;                   /* Se vuelve visible */
-  transform: translateY(0);     /* Sube a su posición original */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* El fondo inclinado (Slanted background) */
 .participant-card-overlay::before {
   content: '';
   position: absolute;
@@ -79,12 +104,10 @@
   transition: background-color 0.3s ease;
 }
 
-/* Opcional: Cambiar color del fondo inclinado al hover */
 .participant-card:hover .participant-card-overlay::before {
    background-color: #ffd6d6; 
 }
 
-/* Estilos de texto específicos */
 .participant-nickname {
   font-weight: 800;
   text-transform: uppercase;
@@ -107,15 +130,4 @@
   font-size: 0.85rem;
   color: #e0e0e0;
   font-weight: 500;
-}
-
-/* --- Ajustes de React Slick --- */
-/* Asegurar que los puntos de navegación se vean en fondo oscuro */
-.slick-dots li button:before {
-    color: white !important; 
-    opacity: 0.5;
-}
-.slick-dots li.slick-active button:before {
-    color: white !important;
-    opacity: 1;
 }

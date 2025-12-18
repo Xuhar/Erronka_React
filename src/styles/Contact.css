@@ -1,12 +1,10 @@
 .contact-form {
     text-align: start;
-    width: 80%;
     margin-inline: auto;
     color: rgb(38, 38, 38);
-    /*backdrop-filter: blur(10px); */
-    background: rgba(255, 255, 255, 0.568);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 0rem;
+    width: 60%;
 }
 @media (max-width: 1024px) {
   .contact-form {
@@ -18,7 +16,7 @@
     width: 100%;
   }
 }
-.contact-form button[type="submit"] {
+.contact-form button[type="submit"], .contact-form .btn-primary {
     display: block;
     padding-inline: 15px;
     margin-left: auto;
@@ -32,4 +30,7 @@
 .required-label::after {
   content: " *";
   color: #dc3545;
+}
+.regist {
+  display: flex;
 }

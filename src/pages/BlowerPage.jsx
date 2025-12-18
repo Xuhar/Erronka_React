@@ -53,11 +53,11 @@ const BlowerPage = () => {
     sebas: {
       name: "Sebas",
       surname: "Peruano",
-      description: "Pepe va rotisimo pero sebas le roba las palomas. ",
+      description: "Lleno de un potencial inmesurable gracias a la técnica de tornados aprendidos de sus apetitosos platos de palomas callejeras.🤪🤰",
       age: 35,
       PulmonCap: 85,
       yazz: 18,
-      imageSrc: "/Blowers/hans.webp",
+      imageSrc: "/Blowers/sebas.jpg",
       events: [
         { date: "21 Jul 2025", rank: 3, time: "02:22 min", topBlow: 72 },
         { date: "01 Oct 2024", rank: 2, time: "02:02 min", topBlow: 89 },

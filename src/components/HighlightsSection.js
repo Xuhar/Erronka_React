@@ -4,20 +4,22 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 function HighlightsSection() {
   const highlights = [
     {
-      title: "Top Teams",
+      title: "Puzgailur",
       description:
         "Meet the most successful marble blowing teams and learn what makes them exceptional. View standings and team profiles.",
       image:
-        "https://via.placeholder.com/600x400/007bff/FFFFFF?text=Team+Focus",
+        "/Teams/puzgailurOnPoint.png",
       buttonText: "View Teams",
+      link: "/teams",
     },
     {
-      title: "Star Blowers",
+      title: "Top Blowers",
       description:
         "Profiles of the most skilled marble blowers participating in the competition, including stats and history.",
       image:
-        "https://via.placeholder.com/600x400/272626/FFFFFF?text=Blower+Profile",
+        "/Teams/perlada.png",
       buttonText: "View Blowers",
+      link: "/blowers",
     },
     {
       title: "Upcoming Events",
@@ -25,14 +27,15 @@ function HighlightsSection() {
         "Stay informed about all upcoming international tournaments, local qualifiers, and rule updates.",
       image: "/argazkiak/canicas.png",
       buttonText: "Event Calendar",
+      link: "/events",
     },
   ];
 
   return (
-    <section className="py-5">
+    <section className="py-4">
       <Container>
-        <h3 className="mb-5 text-center text-outline-white display-6">
-          Featured Highlights
+        <h3 className="mb-4 text-center text-outline-white display-6">
+          Featured Pages
         </h3>
         <Row className="g-4">
           {highlights.map((highlight, index) => (
@@ -52,7 +55,7 @@ function HighlightsSection() {
                     {highlight.description}
                   </Card.Text>
                   <Button
-                    href="#"
+                    href={highlight.link || "#"}
                     variant="outline-primary"
                     size="sm"
                     className="mt-3"

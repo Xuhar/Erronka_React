@@ -1,5 +1,6 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+// 1. Importamos 'Button' aquí
+import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 
 function NavBar() {
   return (
@@ -10,7 +11,8 @@ function NavBar() {
           <img src="/argazkiak/logoaB.png" width="36" alt="Marblow Logo" />
         </Navbar.Brand>
         <Navbar.Collapse id="navbarUnderlineExample">
-          <Nav className="navbar-nav-underline">
+          {/* 2. Añadimos 'me-auto' (margin-end: auto) para empujar el contenido siguiente a la derecha */}
+          <Nav className="navbar-nav-underline me-auto">
             <Nav.Link href="/" className="text-white">
               Home
             </Nav.Link>
@@ -34,6 +36,18 @@ function NavBar() {
               Contact
             </Nav.Link>
           </Nav>
+          
+          {/* 3. Nuevo bloque para el botón de Log In */}
+          <Nav>
+            <Button 
+                href="/login" 
+                variant="outline-light" 
+                className="ms-2" // Un pequeño margen a la izquierda para separarlo si colapsa
+            >
+                Log In
+            </Button>
+          </Nav>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
