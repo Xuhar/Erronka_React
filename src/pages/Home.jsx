@@ -1,5 +1,6 @@
 import Hero from '../components/HeroSection';
 import Highlights from '../components/HighlightsSection';
+import AdBanner from '../components/AdBanner'
 
 const Home = () => {
   return (
@@ -19,9 +20,7 @@ const Home = () => {
         }}
       />
       <Highlights />
-      <section className="home-content">
-        {/* Contenido específico de home */}
-      </section>
+      <AdBanner position="right" closeable={true} />
     </>
   );
 };

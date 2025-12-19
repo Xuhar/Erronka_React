@@ -7,7 +7,7 @@ const Login = () => {
     <>
       <Hero 
         title="Log in"
-        subtitle="Log in as user to... 'ventajas de user'"
+        subtitle="Log in as user to bet, sign up as blower... and much more!"
         cosas={
             <Form 
               fields={['username', 'password']} 

@@ -88,7 +88,7 @@ function HeroBlower({
                     <ProgressBar 
                       now={(age / MAX_AGE) * 100} 
                       variant="success" 
-                      striped
+                      animated
                       style={{ height: '24px', borderRadius: '12px', backgroundColor: 'rgba(255,255,255,0.1)' }} 
                     />
                   </div>
@@ -102,7 +102,7 @@ function HeroBlower({
                     <ProgressBar 
                       now={(yazz / MAX_SMOKE_YEARS) * 100} 
                       variant="danger" 
-                      striped 
+                      animated
                       style={{ height: '24px', borderRadius: '12px', backgroundColor: 'rgba(255,255,255,0.1)' }} 
                     />
                   </div>

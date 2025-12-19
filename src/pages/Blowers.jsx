@@ -29,7 +29,7 @@ const teamRoster = [
       surname: "Makina",
       age: 28,
       lungCapacity: "6.2L Capacidad",
-      image: "/Blowers/raul.jpg"
+      image: "/Blowers/ruso.webp"
     },
      {
       name: "Sebas",

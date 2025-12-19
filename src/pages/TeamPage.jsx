@@ -1,5 +1,7 @@
 import Hero from '../components/Teams/TeamHero'
 import TeamCatalog from '../components/Teams/TeamCatalog';
+import Form from '../components/Form';
+import HeroCosas from '../components/HeroSection'
 
 import "../styles/Team.css"
 const teamRoster = [
@@ -29,7 +31,7 @@ const teamRoster = [
       surname: "Makina",
       age: 28,
       lungCapacity: "6.2L Capacidad",
-      image: "/Blowers/raul.jpg"
+      image: "/Blowers/ruso.webp"
     },
      {
       name: "Sebas",
@@ -44,7 +46,6 @@ const TeamPage = () => {
   return (
     <>
       <Hero
-        logasdfasoSrc="/Teams/puzgailur.png"
         logoSrc="/Teams/puzgailur.png"
         name="Puzgailur"
         description="Puzgailur, euskal herriko kanika putzari txapeldunak 2018. urtean. Talde bikaina izan zen eta maila mantentzen da! Urte hartan, Donostiako Aste Nagusian, final handian aurkariak harritu zituzten: kapitainak, Xabier 'Puzka' Etxeberria, 47 kanika jarri zituen segidan, haizea kontrolatuz eta jendetza oihuka jarriz. Harrezkero, Puzgailur taldeak urtero parte hartzen du txapelketetan, gazte berriak sartuz –azkenekoan, Miren neskak, 19 urte besterik ez duela, erakustaldi ikusgarria egin zuen Bilboko jaian."
@@ -53,6 +54,12 @@ const TeamPage = () => {
             title="Blowers" 
             participants={teamRoster} 
         />
+      <HeroCosas 
+        title="Apuntarse"
+        cosas={
+            <Form fields={['name', 'email', 'message', 'terms']} />
+        }
+      />
     </>
   );
 };

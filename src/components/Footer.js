@@ -4,15 +4,15 @@ import { Container, Nav } from "react-bootstrap";
 function Footer() {
   return (
     <footer
-      className="px-3 py-4"
+      className="px-3"
       style={{ backgroundColor: "#272626", color: "white" }}
     >
-      <Container className="py-4">
+      <Container className="pt-4 pb-2">
         {/* FILA SUPERIOR – siempre space-between y menú centrado perfecto */}
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4 mb-4">
           
-          {/* Izquierda: Logo + copyright */}
-          <div className="text-center text-md-start">
+          {/* Izquierda: Solo logo en desktop, oculto en móvil */}
+          <div className="text-center text-md-start order-2 order-md-0 d-none d-md-block">
             <img
               src="/argazkiak/logoaB.png"
               alt="Marblow"
@@ -33,16 +33,17 @@ function Footer() {
             <Nav.Link href="#" className="text-white px-0">Contact</Nav.Link>
           </Nav>
 
-          {/* Versión móvil del menú (se muestra solo en móvil) */}
-          <Nav className="flex-column align-items-center d-md-none">
+          {/* Versión móvil del menú - ORDEN 0 en móvil (primero) */}
+          <Nav className="flex-column align-items-center d-md-none order-0">
             <Nav.Link href="#" className="text-white">Home</Nav.Link>
             <Nav.Link href="#" className="text-white">Teams</Nav.Link>
             <Nav.Link href="#" className="text-white">Blowers</Nav.Link>
             <Nav.Link href="#" className="text-white">Events</Nav.Link>
+            <Nav.Link href="#" className="text-white">Contact</Nav.Link>
           </Nav>
 
-          {/* Derecha: Redes sociales */}
-          <div className="text-center text-md-end">
+          {/* Derecha: Redes sociales - ORDEN 1 en móvil (medio) */}
+          <div className="text-center text-md-end order-1">
             <p className="mb-2 text-white-50 small">Social Media:</p>
             <div className="d-flex justify-content-center justify-content-md-end gap-4">
               <a href="https://www.instagram.com/willsmith/" target="_blank" rel="noopener noreferrer">
@@ -74,9 +75,22 @@ function Footer() {
           <img
             src="/argazkiak/taldearen-izena1.png"
             alt="Marblow"
-            className="marblogo"
-            style={{ height: "90px", width: "200px", objectFit: "contain" }}
+            className="marblogo mb-3"
+            style={{ width: "200px", objectFit: "contain" }}
           />
+
+          {/* Copyright en móvil - aparece al final de todo */}
+          <div className="d-md-none text-center">
+            <img
+              src="/argazkiak/logoaB.png"
+              alt="Marblow"
+              width="50"
+              className="mb-2"
+            />
+            <p className="mb-0 small text-white-50">
+              © Marblow 2025<br />Todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </Container>
     </footer>
