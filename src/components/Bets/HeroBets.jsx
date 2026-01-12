@@ -17,7 +17,7 @@ function HeroBets() {
           </h1>
         </div>
         <p className="text-xl text-purple-100 mb-6">
-          Place your bets on the world's most thrilling marble competitions!
+          Place your bets on the world's most rigged marble competitions!(and lose surely)
         </p>
         <div className="flex flex-wrap justify-center gap-8 text-sm">
           <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
