@@ -18,6 +18,7 @@ const Home = () => {
             href: "#rules",
             variant: "outline-light"
         }}
+        cosas=""
       />
       <Highlights />
       <AdBanner position="right" closeable={true} />

@@ -28,7 +28,7 @@ function NavBar() {
               className="nav-link-white"
             >
               <NavDropdown.Item href="/events">Incoming Events</NavDropdown.Item>
-              <NavDropdown.Item href="/">Previous Events</NavDropdown.Item>
+              <NavDropdown.Item href="/Previous">Previous Events</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#">Freestyle</NavDropdown.Item>
             </NavDropdown>
