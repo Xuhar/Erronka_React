@@ -30,7 +30,7 @@ function NavBar() {
               <NavDropdown.Item href="/events">Incoming Events</NavDropdown.Item>
               <NavDropdown.Item href="/Previous">Previous Events</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#">Freestyle</NavDropdown.Item>
+              <NavDropdown.Item href="/FreeStyle">Freestyle</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/contact" className="text-white">
               Contact

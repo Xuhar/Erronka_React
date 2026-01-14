@@ -12,6 +12,7 @@ import Events from './pages/Events';
 import Sponsors from './pages/Sponsors';
 import "./App.css";
 import PreviousEvents from "./pages/Previous";
+import FreeStyle from "./pages/FreeStyle";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="previous" element={<PreviousEvents />} />
-
+          <Route path="FreeStyle" element={<FreeStyle />} />
         </Route>
       </Routes>
     </BrowserRouter>
