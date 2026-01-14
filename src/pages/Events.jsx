@@ -1,14 +1,19 @@
 import React from "react";
 import { Table, Badge } from "react-bootstrap";
 import DataSection from "../components/DataSection";
+import Hero from '../components/HeroSection';
 
 function Events() {
   return (
-    <DataSection
-      title="Competitions"
-      subtitle="List of competitions this year"
-    >
-      <Table striped bordered hover responsive>
+    <>
+      <Hero 
+        title="Competitions"
+        subtitle="List of competitions"
+        cosas={
+          <DataSection
+       
+      >
+        <Table striped bordered hover responsive>
         <thead>
           <tr>
             <th>#</th>
@@ -22,8 +27,8 @@ function Events() {
           <tr>
             <td>1</td>
             <td>Marble Wind Challenge</td>
-            <td></td>
-            <td>15/03/2026</td>
+            <td>Time Trial</td>
+            <td>15/02/2026</td>
             <td>
               <Badge bg="success">Active</Badge>
             </td>
@@ -47,7 +52,7 @@ function Events() {
             <td>Kids</td>
             <td>10/02/2026</td>
             <td>
-              <Badge bg="warning">Incoming</Badge>
+              <Badge bg="warning" text="dark">Incoming</Badge>
             </td>
           </tr>
           <tr>
@@ -55,12 +60,17 @@ function Events() {
             <td>Blow King</td>
             <td>Smokers</td>
             <td>5/04/2026</td>
-            <td><Badge bg="secondary">Incoming</Badge></td>
+            <td><Badge bg="warning" text="dark">Incoming</Badge></td>
 
           </tr>
         </tbody>
       </Table>
     </DataSection>
+        }
+      />
+      
+    </>
+    
   );
 }
 
